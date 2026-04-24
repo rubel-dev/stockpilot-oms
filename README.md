@@ -256,6 +256,42 @@ Seeded sign-in credentials:
 - operations: `ops@northstar.example` / `Ops@12345`
 
 That seed data is intentionally small and believable: enough to show low-stock alerts, warehouse imbalances, purchase history, a processing sales order, recent movements, and a non-empty activity feed without turning the UI into noisy fake data.
+
+## Deployment
+
+Production deployment is set up for:
+
+- backend: Render
+- database: Render Postgres
+- frontend: Vercel
+
+### Backend
+
+The repository includes [render.yaml](</C:/Users/Rubel/Ai/project/stockpilot-oms/render.yaml>) so Render can provision and redeploy the backend from git without hand-editing build commands every time.
+
+Required backend environment values:
+
+- `DATABASE_URL`
+- `JWT_SECRET_KEY`
+- `JWT_ALGORITHM=HS256`
+- `JWT_ACCESS_TOKEN_EXPIRE_MINUTES=480`
+- `CORS_ALLOW_ORIGINS=https://your-production-frontend.vercel.app`
+
+Optional but recommended:
+
+- `CORS_ALLOW_ORIGIN_REGEX=^https://.*\.vercel\.app$`
+
+That keeps Vercel preview deployments from breaking CORS every time the preview hostname changes.
+
+### Frontend
+
+Set the Vercel environment value:
+
+```env
+NEXT_PUBLIC_API_URL=https://your-render-backend.onrender.com/api/v1
+```
+
+Once those values are set, ordinary git pushes are enough for automatic redeploys on both Render and Vercel.
 ```
 
 ## API Summary

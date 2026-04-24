@@ -1,0 +1,25 @@
+.env
+.env.local
+.env.*.local
+
+# Python
+backend/.venv/
+backend/.pytest_cache/
+backend/.coverage
+backend/**/*.pyc
+backend/**/__pycache__/
+
+# Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/.turbo/
+frontend/frontend-dev.log
+frontend/frontend-dev.err.log
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.docs
+docs

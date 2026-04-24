@@ -1,0 +1,9 @@
+pyproject.toml
+app/__init__.py
+app/main.py
+app/py.typed
+stockpilot_oms_backend.egg-info/PKG-INFO
+stockpilot_oms_backend.egg-info/SOURCES.txt
+stockpilot_oms_backend.egg-info/dependency_links.txt
+stockpilot_oms_backend.egg-info/requires.txt
+stockpilot_oms_backend.egg-info/top_level.txt

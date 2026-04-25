@@ -15,6 +15,7 @@ export function AppShell({ children }: React.PropsWithChildren) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    setReady(false);
     const session = loadSession();
     const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/register");
 

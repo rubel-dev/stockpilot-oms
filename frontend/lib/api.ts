@@ -3,7 +3,7 @@
 import { clearSession, loadSession } from "@/lib/auth";
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL ?? "https://stockpilot-oms-1.onrender.com/api/v1";
+  process.env.NEXT_PUBLIC_API_URL ?? "/api/v1";
 
 type ApiOptions = RequestInit & {
   auth?: boolean;

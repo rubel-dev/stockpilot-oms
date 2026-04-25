@@ -1,6 +1,4 @@
 # Environment
-.env
-.env.local
 .env.*.local
 backend/.env
 frontend/.env.local
@@ -32,5 +30,6 @@ pnpm-debug.log*
 # OS / editors
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
+config.bat
+node_modules

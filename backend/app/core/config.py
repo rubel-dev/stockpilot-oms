@@ -36,7 +36,7 @@ class Settings(BaseSettings):
         "http://localhost:3001",
         "http://127.0.0.1:3001",
     ]
-    cors_allow_origin_regex: str | None = None
+    cors_allow_origin_regex: str | None = r"^https://.*\.vercel\.app$"
 
     model_config = SettingsConfigDict(
         env_file=".env",

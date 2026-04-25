@@ -26,6 +26,6 @@ services:
       - key: JWT_ACCESS_TOKEN_EXPIRE_MINUTES
         value: "480"
       - key: CORS_ALLOW_ORIGINS
-        value: https://stockpilot-tawny.vercel.app
+        value: https://frontend-beta-nine-56.vercel.app
       - key: CORS_ALLOW_ORIGIN_REGEX
         value: ^https://.*\.vercel\.app$
